@@ -1,7 +1,5 @@
 # MitoChannelAnalysis
 
-[![CI](https://github.com/stevengogogo/MitoChannelAnalysis/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/stevengogogo/MitoChannelAnalysis/actions/workflows/ci.yml) [![docs](https://github.com/stevengogogo/MitoChannelAnalysis/actions/workflows/docs.yml/badge.svg?branch=main)](https://github.com/stevengogogo/MitoChannelAnalysis/actions/workflows/docs.yml)
-
 <img width="1177" alt="Graphical Abstract" src="https://user-images.githubusercontent.com/29009898/130342513-081f4592-3cc6-4468-ba3b-868416f3be6b.png">
 
 > Codes, data and notebooks for the manuscript titled "Mathematical Modeling and Analysis of Mitochondrial Retrograde Signaling Dynamics"
