@@ -1,3 +1,5 @@
+name = "ExpressionLevel"
+uuid = "c381b554-0315-11ec-0848-89b30825d5ce"
 [deps]
 DataStructures = "864edb3b-99cc-5e75-8d2d-829cb0a9cfe8"
 PyPlot = "d330b81b-6aea-500a-939a-2ce795aea3ee"

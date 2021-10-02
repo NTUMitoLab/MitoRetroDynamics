@@ -31,7 +31,7 @@ cb = DiscreteCallback(condition,affect!)
 noise = 0.000001
 out = []
 IN  = []
-s = 0.1:0.01:1.
+s = 0.1:0.3:1.
 for i in ProgressBar(s)
     
     # Assign new input 
@@ -40,10 +40,10 @@ for i in ProgressBar(s)
     # Get steady state
     probss = SteadyStateProblem(rn,u_,p_)
     solss = solve(probss, DynamicSS(AutoTsit5(Rosenbrock23())))
-    u_ = solss.u
+    u0_ = solss.u
 
     # SDE 
-    prob = SDEProblem(rn, u_, (0.,100.), vcat(p_, noise), noise_scaling= (@variables η1)[1])
+    prob = SDEProblem(rn, u0_, (0.,100.), vcat(p_, noise), noise_scaling= (@variables η1)[1])
     sol = solve(prob, LambaEM(); callback=cb)
     ot = output(sol.u, rtg13_n)
     
@@ -67,7 +67,7 @@ end
 
 fig, ax = plt.subplots()
 ax.imshow(heatmap, extent=[0,1,0,1] )
-fig.savefig("RobustAnalysis/test/data/heatmap_rtg13_n_1e-6.svg", transparent=true, bbox_inches = "tight" )
+#fig.savefig("RobustAnalysis/test/data/heatmap_rtg13_n_1e-6.svg", transparent=true, bbox_inches = "tight" )
 plt.display_figs()
 
 #=

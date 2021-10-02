@@ -5,6 +5,29 @@ Gallery of signals
 abstract type wave end 
 
 """
+Store simulated array with time frame
+"""
+@with_kw struct SimulatedSignal
+    array
+    t 
+    @assert length(array) == length(t)
+end
+
+
+function Base.getindex(A::SimulatedSignal, i)
+    return A.array[i]
+end
+
+function Base.length(A::SimulatedSignal)
+    return length(A.array)
+end
+
+function simulate(sigGen::wave, ts)
+    arr = sigGen.(ts)
+    return SimulatedSignal(arr, ts)
+end
+
+"""
 Cascading operator
 
 Arguements
@@ -25,6 +48,8 @@ end
 
 
 
+
+
 """
 Positive Sine in [0, amp]
 """
@@ -40,6 +65,11 @@ function(self::PosSine)(t)
 end
 
 
+
+
+"""
+Step Signal
+"""
 @with_kw struct Step <: wave
     t_start = 0.
     val_init = 0.
@@ -57,6 +87,8 @@ function (self::Step)(t)
     end
     return sig
 end
+
+
 
 
 @with_kw struct Square  <: wave
@@ -80,6 +112,8 @@ function (self::Square)(t)
     return sig 
 end
 
+
+
 @with_kw struct SquarePulse <: wave
     t_str = 0.
     t_end = 3.
@@ -98,6 +132,7 @@ function (self::SquarePulse)(t)
     return sig 
 end
 
+
 @with_kw struct BaseLine <: wave 
     base = 0. 
 end
@@ -105,4 +140,6 @@ end
 function (self::BaseLine)(t)
     return self.base
 end
+
+
 
