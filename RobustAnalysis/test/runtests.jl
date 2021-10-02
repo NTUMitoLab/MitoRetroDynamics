@@ -14,6 +14,8 @@ using Distributions
 using KernelDensity
 using QuadGK
 using Random
+using Pkg 
+Pkg.build("PyPlot")
 import Plots
 import PyPlot 
 plt = PyPlot
