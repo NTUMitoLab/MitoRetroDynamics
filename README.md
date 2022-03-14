@@ -14,6 +14,7 @@ Codes, data and notebooks for the manuscript titled "Mathematical Modeling and A
 |[FrequencyResponse.ipynb](FrequencyResponse.ipynb)|[FrequencyResponse/](FrequencyResponse/)|Generate frequency analysis on retrograde signaling model|
 |[RobustAnalysis.ipynb](RobustAnalysis.ipynb)|[RobustnessAnalysis/](RobustAnalysis/)|Simulation of retrograde signaling model integrated with Chemical langevin equation|
 |[SteadyStates.ipynb](SteadyStates.ipynb)|[SteadyStates/](SteadyStates/)|Steady state solutions under multiple knockout conditions and visualization|
+|[validation.ipynb](validatoin.ipynb)|Validate the retrograde response with different expreesion level of RTG proteins|
 
 
 
