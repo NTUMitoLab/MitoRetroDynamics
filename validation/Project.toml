@@ -1,0 +1,6 @@
+[deps]
+CairoMakie = "13f3f980-e62b-5c42-98c6-ff1f3baf88f0"
+FindSteadyStates = "5ce5e58b-649a-467a-bfd0-ccefe064e451"
+Makie = "ee78f7c6-11fb-53f2-987a-cfe4a2b5a57a"
+Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
+RetroSignalModel = "413adb04-e75d-4cfe-b7ca-413dd9cc07d4"
